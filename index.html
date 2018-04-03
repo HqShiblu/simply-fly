@@ -1406,8 +1406,11 @@
 
     <script>
     $(document).ready(function () {
+	    
+	    
+	    
 	
-        //table initialization
+        //tables' initialization
 		
         var filterTableHtml = '<tbody>';
         for (var i = 0; i < 1999; i++) {
@@ -1426,12 +1429,19 @@
         }
         columnFilterTableHtml += '</tbody>';
 		
-		$(".sectionPanel").width($(".sectionParent").width());
+	$(".sectionPanel").width($(".sectionParent").width());
         $(".filterTable").append(filterTableHtml);
         $("#myEditable").append(columnFilterTableHtml);
         $("#columnTable").append(columnFilterTableHtml);
         $("#columnTable2").append(columnFilterTableHtml);
         $(".progressTable, .progressTable2").append(columnFilterTableHtml);
+	    
+	if($(".sectionParent").width()>($(".mainParent").width()*30/100)){
+		$(".sectionPanel").css("position","relative");
+	}
+	else{
+		$(".sectionPanel").css("position","fixed");
+	}
 				
         $(document).scroll(function () {
             if ($(document).scrollTop() > 100) {
