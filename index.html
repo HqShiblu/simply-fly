@@ -190,6 +190,9 @@
 			color:rgb(17,96,74);
 			font-family:verdana;
 		}
+	    .topHeading{
+		margin-top:-6px;    
+	    }
 		</style>
 </head>
 
@@ -199,7 +202,7 @@
             <div class="navbar-header">
                 &nbsp;&nbsp;<br /><span class="bsmenu">
                     <div class="header">
-                        <h1 style="margin-top:-6px;">Simply Fly JS&nbsp;<i class="fa fa-paper-plane" style="font-size:34px;"></i></h1>
+                        <h1 class="topHeading">Simply Fly JS&nbsp;<i class="fa fa-paper-plane" style="font-size:34px;"></i></h1>
                     </div>
                 </span>
                 <center>
@@ -1232,9 +1235,9 @@
                                 var sum =  numberArray.getSum();&nbsp;&nbsp;&nbsp;<span class="comment">/* returns 276*/</span><br />
                                 var average=  numberArray.getAverage();&nbsp;&nbsp;&nbsp;<span class="comment">/* returns 25.0909...*/</span>
                             </span>
+				</center>
                             <br />
-                            <span>In both the cases the original <strong>numberArray remains unchanged</strong></span>
-                        </center>
+                            <span>In both the cases the original <strong>numberArray remains unchanged</strong></span>                        
                     </div>
                 </div>
                 <br /><br />
@@ -1252,7 +1255,7 @@
                         We have an array...
                         <span style="display: block; height: 10px;"></span>
                         <center>
-                            <p style="font-family:arial;">
+                            <span style="font-family:arial;">
                                 var numberArray = [ 5, 4, 1, 2, 9, 8, 7, 4, 1, 210, 25 ];<br />
                                 var stringArray = [ "Tom", "Jerry", "Popeye", "Olive", "Bluto" ];<br /><br />
                                 var minNumber =  numberArray.getMin();&nbsp;&nbsp;&nbsp;<span class="comment">/* returns 1*/</span><br />
@@ -1261,10 +1264,10 @@
                                 var maxNumber =  numberArray.getMax();&nbsp;&nbsp;&nbsp;<span class="comment">/* returns 210*/</span><br />
                                 var maxString =  stringArray.getMax();&nbsp;&nbsp;&nbsp;<span class="comment">/* returns "Tom"*/</span>
                                 <br /><br />
-                            </p>
+                            </span>
                             <br />
-                            <span id="separateWith"> Both <strong>numberArray and stringArray remain unchanged</strong> </span>
-                        </center>
+				</center>
+                            <span id="separateWith"> Both <strong>numberArray and stringArray remain unchanged</strong> </span>                        
                     </div>
                 </div>
                 <br /><br />
@@ -1282,7 +1285,7 @@
                         We have an array...
                         <span style="display: block; height: 10px;"></span>
                         <center>
-                            <p style="font-family:arial;">
+                            <span style="font-family:arial;">
                                 var myArray = [ "hello", "John", "how", "are", "you" ];<br /><br />
                                 var separatedString =  myArray.separateWith(" ");&nbsp;&nbsp;&nbsp;<span class="comment">/* returns "hello John how are you"*/</span> <br />
                                 var anotherString =  myArray.separateWith("-");&nbsp;&nbsp;&nbsp;<span class="comment">/* returns "hello-John-how-are-you"*/</span>
@@ -1291,10 +1294,10 @@
                                     /* returns "hello<strong>abc</strong>John<strong>abc</strong>how<strong>abc</strong>are<strong>abc</strong>you"*/
                                 </span>
                                 <br />
-                            </p>
-                            <br />
-                            <span id="clean">In both the cases the original <strong>myArray remains unchanged</strong></span>
+                            </span>
+                            <br />                            
                         </center>
+			    <span id="clean">In both the cases the original <strong>myArray remains unchanged</strong></span>
                     </div>
                 </div>
                 <br /><br />
@@ -1312,7 +1315,7 @@
                         We have an array...
                         <span style="display: block; height: 10px;"></span>
                         <center>
-                            <p style="font-family:arial;">
+                            <span style="font-family:arial;">
                                 var myArray = [ "hello", null, undefined, "John", "how", NaN, "are", null, "you" ];<br /><br />
                                 var cleanedString =  myArray.clean(null);&nbsp;&nbsp;&nbsp;<span class="comment">/* returns [ "hello", undefined, "John", "how", NaN, "are", "you" ]*/</span> <br />
                                 var cleanedString =  myArray.clean(undefined);&nbsp;&nbsp;&nbsp;<span class="comment">/* returns [ "hello", null, "John", "how", NaN, "are", null, "you" ]*/</span> <br />
@@ -1322,10 +1325,10 @@
                                     <br />
                                     /* returns [ "hello",  "John", "how", "are", "you" ]*/
                                 </span> <br /><br />
-                            </p>
-                            <br />
-                            <span id="replaceAll">In all the cases the original <strong>myArray remains unchanged</strong></span>
+                            </span>
+                            <br />                            
                         </center>
+			    <span id="replaceAll">In all the cases the original <strong>myArray remains unchanged</strong></span>
                     </div>
                 </div>
                 <br /><br />
@@ -1348,7 +1351,7 @@
                         We have an array...
                         <span style="display: block; height: 10px;"></span>
                         <center>
-                            <p style="font-family:arial;" id="miscellaneous">
+                            <span style="font-family:arial;" id="miscellaneous">
                                 var numberArray = [ 5, 4, 1, 2, 9, 8, 7, 4, 1, 210, 25 ];<br />
                                 var stringArray = [ "Tom", "Jerry", "Popeye", "Olive", "Bluto" ];<br /><br />
                                 var minNumber =  numberArray.getMin();&nbsp;&nbsp;&nbsp;<span class="comment">/* returns 1*/</span><br />
@@ -1357,10 +1360,10 @@
                                 var maxNumber =  numberArray.getMax();&nbsp;&nbsp;&nbsp;<span class="comment">/* returns 210*/</span><br />
                                 var maxString =  stringArray.getMax();&nbsp;&nbsp;&nbsp;<span class="comment">/* returns "Tom"*/</span>
                                 <br /><br />
-                            </p>
-                            <br />
-                            <span id="formatDateFrom">Both <strong>numberArray and stringArray remain unchanged</strong></span>
+                            </span>
+                            <br />                            
                         </center>
+			    <span id="formatDateFrom">Both <strong>numberArray and stringArray remain unchanged</strong></span>
                     </div>
 					<span id="datesBetween"></span>
                 </div>
