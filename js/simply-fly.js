@@ -289,11 +289,13 @@ $.fn.extend({
                 });
 			}
 			function slideIt(){
-					if (from === "right") {
-                            $(element).animate({ left: 0, opacity: 1 }, time);
-                        } else {
-                            $(element).animate({ right: 0, opacity: 1 }, time);
-                        }
+					setTimeout(function(){
+						if (from === "right") {
+							    $(element).animate({ left: 0, opacity: 1 }, time);
+							} else {
+							    $(element).animate({ right: 0, opacity: 1 }, time);
+							}
+					},1000);
 			}
         }
 });
