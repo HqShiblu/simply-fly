@@ -295,7 +295,7 @@ $.fn.extend({
 							} else {
 							    $(element).animate({ right: 0, opacity: 1 }, time);
 							}
-					},1000);
+					},600);
 			}
         }
 });
