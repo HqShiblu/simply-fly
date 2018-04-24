@@ -1,5 +1,3 @@
-#Simply Fly JS
-
 
 
 Simply Fly is a client side javascript library based on jQuery for manipulating DOM elements, array and strings.
