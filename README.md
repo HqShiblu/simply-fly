@@ -10,12 +10,12 @@ Simply Fly is a client side javascript library based on jQuery for manipulating 
 How to add...
 
 Simply Fly is dependent on jQuery, so first add jQuery to your page- 
-  `<script src="https://code.jquery.com/jquery-3.3.1.min.js" ></script>`
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" ></script>
 
 
 Then add Simply Fly- 
-  `<script src="https://hqshiblu.github.io/simply-fly/js/simply-fly.js" ></script>`
+  <script src="https://hqshiblu.github.io/simply-fly/js/simply-fly.js" ></script>
 
 
 or the minified version-
- `<script src="https://hqshiblu.github.io/simply-fly/js/simply-fly.min.js" ></script>`
+ <script src="https://hqshiblu.github.io/simply-fly/js/simply-fly.min.js" ></script>
