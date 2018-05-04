@@ -259,8 +259,9 @@ $.fn.extend({
         });
         return $(this);
     },
-	slideOnAppear:function(positionArray) {
-            var topMost = $(this).offset().top + 20;
+	slideOnAppear:function(positionArray) {	
+			$(this).each(function(){
+				var topMost = $(this).offset().top + 20;
             var element = $(this);
             var from = "right";
             var time = 800;
@@ -296,7 +297,8 @@ $.fn.extend({
 							    $(element).animate({ right: 0, opacity: 1 }, time);
 							}
 					},600);
-			}
+			}	
+			});
         }
 });
 
