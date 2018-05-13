@@ -261,7 +261,7 @@ $.fn.extend({
     },
 	slideOnAppear:function(positionArray) {	
 			$(this).each(function(){
-				var topMost = $(this).offset().top + 20;
+				var topMost = $(this).offset().top;
             var element = $(this);
             var from = "right";
             var time = 800;
@@ -271,14 +271,17 @@ $.fn.extend({
             }
             $(this).css({
                 "position": "relative",
-                "top": 0,
 				"opacity":0
             });
-            $(this).css((from === "right")?"left":"right", window.innerWidth);
+			if(from==="right" || from==="left"){
+				$(this).css((from === "right")?"left":"right", window.innerWidth);
+			}else{
+				$(this).css((from === "bottom")?"top":"bottom", window.innerHeight);
+			}
             var a = 0;
-            if ($(this).offset().top < window.innerHeight) {
+            if (topMost < window.innerHeight) {
                 setTimeout(slideIt(),900);
-            } else if($(this).offset().top<($(document).scrollTop()+window.innerHeight)){
+            } else if(topMost<($(document).scrollTop()+window.innerHeight)){
 				setTimeout(slideIt(),900);               
             }else{
 				$(document).scroll(function () {
@@ -293,13 +296,17 @@ $.fn.extend({
 					setTimeout(function(){
 						if (from === "right") {
 							    $(element).animate({ left: 0, opacity: 1 }, time);
-							} else {
+							} else  if (from === "left"){
 							    $(element).animate({ right: 0, opacity: 1 }, time);
+							}else  if (from === "bottom"){
+							    $(element).animate({ top: 0, opacity: 1 }, time);
+							}else  if (from === "top"){
+							    $(element).animate({ bottom: 0, opacity: 1 }, time);
 							}
 					},600);
 			}	
 			});
-        }
+			}
 });
 
 String.prototype.replaceAll = function (oldOne, newOne) {
