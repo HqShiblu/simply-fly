@@ -1069,7 +1069,7 @@ jQuery's syntax is designed to make it easier to navigate a document, select DOM
                         </center>
                         <span style="display: block; height: 4px;"></span>
 							<br/>
-								As you can see the above div has appeared from right, but what if we want our element to appear from left?<br/>
+								As you can see the above div has appeared from right, but what if we want our element to appear from left? Or top? Or botto,? <br/>
 								<strong>slideOnAppear()</strong> takes <strong>optional JSON parameters</strong> through which you can tell the method which side your element will appear from and also the time it will take to slide. <strong>Set the time in milliseconds.</strong>
                         <br /><br />
 						<center>
@@ -1085,6 +1085,22 @@ jQuery's syntax is designed to make it easier to navigate a document, select DOM
 									<h4>
                                         <strong>$(".fromRightSlider").slideOnAppear({</strong><br /><br />
                                         &nbsp;&nbsp;from : "right",
+										<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;time : 600<span class="comment">&nbsp;&nbsp;&nbsp;/* milliseconds */</span>
+										<br/><br/><strong>});</strong>
+                                    </h4>
+				    <br/><br/>
+									<h4>
+                                        <strong>$(".fromTopSlider").slideOnAppear({</strong><br /><br />
+                                        &nbsp;&nbsp;from : "top",
+										<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;time : 600<span class="comment">&nbsp;&nbsp;&nbsp;/* milliseconds */</span>
+										<br/><br/><strong>});</strong>
+                                    </h4>
+				    <br/><br/>
+									<h4>
+                                        <strong>$(".fromBottomSlider").slideOnAppear({</strong><br /><br />
+                                        &nbsp;&nbsp;from : "bottom",
 										<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         &nbsp;&nbsp;time : 600<span class="comment">&nbsp;&nbsp;&nbsp;/* milliseconds */</span>
 										<br/><br/><strong>});</strong>
@@ -1105,6 +1121,22 @@ jQuery's syntax is designed to make it easier to navigate a document, select DOM
 								<br/><br/><br/>
 									<h1 style="font-family:'Roboto Condensed';color:white;">
 										Hear reason, or she'll make you feel her
+									</h1>
+								<br/><br/><br/>
+							</div>
+							<br/><br/>
+							<div class="fromTopSlider">
+								<br/><br/><br/>
+									<h1 style="font-family:'Roboto Condensed';color:white;">
+										Well done is better than well said
+									</h1>
+								<br/><br/><br/>
+							</div>
+							<br/><br/>
+							<div class="fromBottomSlider">
+								<br/><br/><br/>
+									<h1 style="font-family:'Roboto Condensed';color:white;">
+										Beware of little expenses. A small leak will sink a great ship
 									</h1>
 								<br/><br/><br/>
 							</div>
@@ -1519,6 +1551,14 @@ jQuery's syntax is designed to make it easier to navigate a document, select DOM
 		$(".fromRightSlider").slideOnAppear({
 		  from : "right",		  
 		  time : 600 
+		});
+	    $(".fromTopSlider").slideOnAppear({
+		  from : "top",		  
+		  time : 1000 
+		});
+	    $(".fromBottomSlider").slideOnAppear({
+		  from : "bottom",		  
+		  time : 500 
 		});
 
         var myDates = datesBetween(new Date("2018/03/21"), new Date("2018/03/28"));
