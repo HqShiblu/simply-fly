@@ -1,7 +1,5 @@
 /*
 	 © Mozammel Hoque Shiblu, 2018	 
-	 This library is free and open source,
-	 anyone is allowed to use and modify with proper courtesy
 */
 
 $.fn.extend({
